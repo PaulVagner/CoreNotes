@@ -35,11 +35,13 @@
                     <navigationItem key="navigationItem" id="gX5-Dw-mIf">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="INA-aa-W5A">
+                                <color key="tintColor" red="0.0" green="0.58772153087692314" blue="0.17400335747186749" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="O9o-DK-MAQ" kind="presentation" id="pXE-RD-qZx"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="organize" id="ZCJ-D5-QcV">
+                                <color key="tintColor" red="0.80987580128205128" green="0.032813809004214434" blue="0.13167332690137007" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="dBA-Vr-RQC" kind="presentation" id="Nvr-y5-csL"/>
                                 </connections>
@@ -49,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dko-ZL-d3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="392"/>
+            <point key="canvasLocation" x="690" y="392"/>
         </scene>
         <!--New NoteVC-->
         <scene sceneID="2ke-j6-gF9">
@@ -125,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CJ-kJ-BDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="1142"/>
+            <point key="canvasLocation" x="690" y="1142"/>
         </scene>
         <!--New CategoryVC-->
         <scene sceneID="duy-M0-wgW">
@@ -145,32 +147,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m6m-9Z-zDD">
-                                <rect key="frame" x="0.0" y="286" width="320" height="188"/>
-                                <animations/>
-                                <date key="date" timeIntervalSinceReferenceDate="469393003.27555698">
-                                    <!--2015-11-16 18:56:43 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-t3-67G" customClass="buttons" customModule="CoreNotes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="515" width="120" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.25425197838429625" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="Cancel:" destination="dBA-Vr-RQC" eventType="touchUpInside" id="OFi-O5-KiM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-hH-Xkh" customClass="buttons" customModule="CoreNotes" customModuleProvider="target">
                                 <rect key="frame" x="180" y="515" width="120" height="30"/>
                                 <animations/>
@@ -190,6 +166,32 @@
                                     <action selector="create:" destination="dBA-Vr-RQC" eventType="touchUpInside" id="adA-CU-sVE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-t3-67G" customClass="buttons" customModule="CoreNotes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="515" width="120" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.25425197838429625" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Cancel:" destination="dBA-Vr-RQC" eventType="touchUpInside" id="OFi-O5-KiM"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m6m-9Z-zDD">
+                                <rect key="frame" x="0.0" y="312" width="320" height="188"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="469393003.27555698">
+                                    <!--2015-11-16 18:56:43 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVV-Vk-jTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="1142"/>
+            <point key="canvasLocation" x="332" y="1142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lZN-77-wum">
@@ -222,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz1-Zh-dNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="392"/>
+            <point key="canvasLocation" x="332" y="392"/>
         </scene>
     </scenes>
 </document>

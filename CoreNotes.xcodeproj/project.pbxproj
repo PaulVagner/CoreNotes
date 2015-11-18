@@ -12,6 +12,9 @@
 		4424E2C11BFA6158009F635D /* NewNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424E2C01BFA6158009F635D /* NewNoteVC.swift */; };
 		4424E2C31BFB6FA1009F635D /* buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424E2C21BFB6FA1009F635D /* buttons.swift */; };
 		4424E2C51BFB828A009F635D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424E2C41BFB828A009F635D /* CoreData.swift */; };
+		4424E2CA1BFCC2EA009F635D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424E2C81BFCC2EA009F635D /* Fabric.framework */; };
+		4424E2CB1BFCC2EA009F635D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4424E2C91BFCC2EA009F635D /* Crashlytics.framework */; };
+		4424E2CD1BFCCCAC009F635D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424E2CC1BFCCCAC009F635D /* Constants.swift */; };
 		4435020C1BFA4AB800EFF938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4435020B1BFA4AB800EFF938 /* AppDelegate.swift */; };
 		443502111BFA4AB800EFF938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4435020F1BFA4AB800EFF938 /* Main.storyboard */; };
 		443502141BFA4AB800EFF938 /* CoreNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 443502121BFA4AB800EFF938 /* CoreNotes.xcdatamodeld */; };
@@ -44,6 +47,9 @@
 		4424E2C01BFA6158009F635D /* NewNoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteVC.swift; sourceTree = "<group>"; };
 		4424E2C21BFB6FA1009F635D /* buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = buttons.swift; path = ../buttons.swift; sourceTree = "<group>"; };
 		4424E2C41BFB828A009F635D /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreData.swift; path = ../CoreData.swift; sourceTree = "<group>"; };
+		4424E2C81BFCC2EA009F635D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		4424E2C91BFCC2EA009F635D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4424E2CC1BFCCCAC009F635D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		443502081BFA4AB800EFF938 /* CoreNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4435020B1BFA4AB800EFF938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443502101BFA4AB800EFF938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4424E2CB1BFCC2EA009F635D /* Crashlytics.framework in Frameworks */,
+				4424E2CA1BFCC2EA009F635D /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,15 @@
 			name = System;
 			sourceTree = "<group>";
 		};
+		4424E2C71BFCC2A1009F635D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4424E2C81BFCC2EA009F635D /* Fabric.framework */,
+				4424E2C91BFCC2EA009F635D /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		443501FF1BFA4AB800EFF938 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +120,7 @@
 				443502221BFA4AB900EFF938 /* CoreNotesTests */,
 				4435022D1BFA4AB900EFF938 /* CoreNotesUITests */,
 				443502091BFA4AB800EFF938 /* Products */,
+				4424E2C71BFCC2A1009F635D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +144,7 @@
 				4424E2C41BFB828A009F635D /* CoreData.swift */,
 				4424E2BE1BFA6143009F635D /* NewCategoryVC.swift */,
 				4424E2C01BFA6158009F635D /* NewNoteVC.swift */,
+				4424E2CC1BFCCCAC009F635D /* Constants.swift */,
 			);
 			path = CoreNotes;
 			sourceTree = "<group>";
@@ -158,6 +177,7 @@
 				443502041BFA4AB800EFF938 /* Sources */,
 				443502051BFA4AB800EFF938 /* Frameworks */,
 				443502061BFA4AB800EFF938 /* Resources */,
+				4424E2C61BFCC24B009F635D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -275,6 +295,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4424E2C61BFCC24B009F635D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c5c5b1aebb1cc12a21d34fd0a20eaf2aab48d4d3 3f9653945723670f6fb4e5d35d9ef1602c3a35bcb9a4dfa8968cef2d8dc6a023";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		443502041BFA4AB800EFF938 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -287,6 +323,7 @@
 				4424E2C51BFB828A009F635D /* CoreData.swift in Sources */,
 				4435020C1BFA4AB800EFF938 /* AppDelegate.swift in Sources */,
 				4424E2BF1BFA6143009F635D /* NewCategoryVC.swift in Sources */,
+				4424E2CD1BFCCCAC009F635D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CoreNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.CoreNotes;
@@ -439,6 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CoreNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paulvagner.CoreNotes;
