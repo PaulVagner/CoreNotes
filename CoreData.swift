@@ -29,13 +29,10 @@ class Category: NSManagedObject {
         return Category.init(entity: entity, insertIntoManagedObjectContext: moc)
     }
     
-    var name = valueForKey("name") as? String
+   @NSManaged var name: String?
+    @NSManaged var color: UIColor?
     
-    var text: String? {
-        
-        get { return valueForKey("name") as? String }
-        set { setValue(newValue, forKey: "name") }
-    }
+    
 }
 
 class Note: NSManagedObject {
@@ -48,19 +45,12 @@ class Note: NSManagedObject {
     
     }
     
-    var text: String? {
-        
-        get { return valueForKey("text") as? String }
-        set { setValue(newValue, forKey: "text") }
-    }
+   @NSManaged var text: String?
+   @NSManaged var category: NSManagedObject?
+    @NSManaged var createdAt: NSDate?
     
-    var category: NSManagedObject? {
-    
-        get { return valueForKey("category") as? NSManagedObject }
-        set { setValue(newValue, forKey: "category") }
-    }
-
 }
+
 
 struct CategoryDictionary {
     
@@ -130,6 +120,7 @@ extension NewNoteVC: Fetchable  {
         let newNote = Note.note()
         newNote?.text = noteTextView.text
         newNote?.category = categories[categoryPicker.selectedRowInComponent(0)]
+        newNote?.createdAt = NSDate()
         
         _appDelegate?.saveContext()
 
@@ -142,6 +133,7 @@ extension NewCategoryVC {
     
     let newCategory = Category.category()
     newCategory?.name = categoryNameField.text
+    newCategory?.color = UIColor.softGreen()
         
     _appDelegate?.saveContext()
     
@@ -163,6 +155,8 @@ extension Fetchable {
         let request = NSFetchRequest(entityName: name)
         
         //do something with predicates latet
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates ?? [])
+        
         
         guard let foundObjects = try? _appDelegate?.managedObjectContext.executeFetchRequest(request) ?? [] else { return completion (found: []) }
         
