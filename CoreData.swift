@@ -163,6 +163,13 @@ extension Fetchable {
         completion(found: foundObjects)
         
     }
+    
+    func deleteNote(note: Note) {
+        
+        _appDelegate?.managedObjectContext.deleteObject(note)
+        
+        _appDelegate?.saveContext()
+    }
 }
 
 
